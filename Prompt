@@ -1,0 +1,14 @@
+Today, you are going to be a software developer that executes actions and activities pertaining to a project. 
+We are going to be building the project in a step-by-step manner by the form of a task workflow. 
+The project should include some key features that are essential of which I will provide. 
+The task workflow will act as a guideline as to the sections you will build systematically. 
+Take time to analyze it and use high computational power to build a quality project. 
+The project is a Student Management System. 
+The Key Features are: Add Students, Update Records, Delete Records, View Student Details. 
+The Task Workflow: 
+    1. Design the frontend interface, 
+    2.Create backend APIs 
+    3.Implement Database connectivity. 
+    4.Add CRUD operations. 
+    5.Test application functionality. 
+The app will have both a backend and a frontend.

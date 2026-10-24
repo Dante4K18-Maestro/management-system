@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="A clear, calm home for your student records.">
+  <title>Students · Northstar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700;750&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#" aria-label="Northstar home"><span class="brand-mark">n.</span><span class="brand-copy">northstar<span>STUDENT PORTAL</span></span></a>
+    <span class="nav-label">WORKSPACE</span>
+    <nav><a class="nav-item active" href="#students"><svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m18 0v-2a4 4 0 0 0-3-3.87M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm11-4v6m-3-3h6"/></svg>All students<span class="nav-count" id="nav-count">0</span></a></nav>
+    <div class="sidebar-bottom"><div class="campus-card"><div class="campus-icon">✳</div><div><strong>One less thing to juggle.</strong><p>Student records, all in one considered place.</p></div></div><div class="profile"><div class="profile-avatar">AD</div><div class="profile-copy"><strong>Administrator</strong><span>Campus workspace</span></div><span class="profile-dots">···</span></div></div>
+  </aside>
+
+  <main class="main" id="students">
+    <header class="topbar"><div class="breadcrumbs">Workspace <span>/</span> <strong>Students</strong></div><div class="top-actions"><span class="live-indicator"><span></span>Live records</span><button class="avatar-small" aria-label="Administrator">AD</button></div></header>
+    <section class="content">
+      <div class="welcome-row"><div><span class="eyebrow"><span class="eyebrow-line"></span>YOUR CAMPUS, AT A GLANCE</span><h1>Every student.<br><em>Right where they belong.</em></h1><p class="intro">A little more clarity in your day. Keep student records organized, up to date, and easy to find.</p></div><button class="button primary" id="add-student"><span class="plus">+</span> Add a student</button></div>
+      <div class="stats-grid" id="stats-grid">
+        <article class="stat-card"><div class="stat-heading"><span>Total students</span><span class="stat-icon ink">◎</span></div><div class="stat-number" id="stat-total">0</div><div class="stat-caption">Across every year &amp; course</div><div class="stat-spark spark-ink"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+        <article class="stat-card"><div class="stat-heading"><span>Active students</span><span class="stat-icon green">↗</span></div><div class="stat-number" id="stat-active">0</div><div class="stat-caption"><span class="tiny-dot green-dot"></span>Currently enrolled</div><div class="stat-spark spark-green"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+        <article class="stat-card"><div class="stat-heading"><span>On leave</span><span class="stat-icon amber">◌</span></div><div class="stat-number" id="stat-leave">0</div><div class="stat-caption"><span class="tiny-dot amber-dot"></span>Taking a short break</div><div class="stat-spark spark-amber"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+        <article class="stat-card"><div class="stat-heading"><span>Graduated</span><span class="stat-icon violet">✳</span></div><div class="stat-number" id="stat-graduated">0</div><div class="stat-caption">Made it to the other side</div><div class="stat-spark spark-violet"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+      </div>
+      <section class="roster-section"><div class="section-header"><div><span class="eyebrow eyebrow-plain">THE ROSTER</span><h2>Student records <span class="record-count" id="record-count">0</span></h2></div><button class="export-button" id="export-csv" title="Download filtered results as CSV"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 16v4h16v-4"/></svg> Export <span>↓</span></button></div>
+        <div class="toolbar"><label class="search-box"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input type="search" id="search" placeholder="Search by name, email or course…" autocomplete="off"></label><label class="filter-select"><span>Status</span><select id="status-filter" aria-label="Filter by student status"><option value="">All students</option><option>Active</option><option>On leave</option><option>Graduated</option></select><svg viewBox="0 0 24 24" fill="none"><path d="m7 10 5 5 5-5"/></svg></label><label class="filter-select"><span>Year</span><select id="year-filter" aria-label="Filter by year of study"><option value="">All years</option><option value="1">Year 1</option><option value="2">Year 2</option><option value="3">Year 3</option><option value="4">Year 4</option><option value="5">Year 5</option><option value="6">Year 6</option></select><svg viewBox="0 0 24 24" fill="none"><path d="m7 10 5 5 5-5"/></svg></label><label class="filter-select course-filter"><span>Course</span><select id="course-filter" aria-label="Filter by course"><option value="">All courses</option></select><svg viewBox="0 0 24 24" fill="none"><path d="m7 10 5 5 5-5"/></svg></label></div>
+        <div class="table-wrap"><table><thead><tr><th>STUDENT</th><th>STUDENT ID</th><th>COURSE &amp; YEAR</th><th>ENROLLED</th><th>STATUS</th><th aria-label="Actions"></th></tr></thead><tbody id="student-rows"></tbody></table><div class="empty-state" id="empty-state" hidden><div class="empty-art"><div class="empty-orbit orbit-one"></div><div class="empty-orbit orbit-two"></div><div class="empty-icon">✳</div></div><h3>No students here just yet.</h3><p id="empty-copy">Start with a name. We’ll take it from there.</p><button class="button primary empty-cta" id="empty-add"><span class="plus">+</span> Add your first student</button></div></div>
+        <footer class="table-footer"><span id="result-summary">Showing 0 students</span><span class="footer-note"><span class="tiny-dot green-dot"></span>Records save automatically</span></footer>
+      </section>
+      <footer class="page-footer"><span>Thoughtfully organized. Always in good company.</span><span>NORTHSTAR · STUDENT MANAGEMENT</span></footer>
+    </section>
+  </main>
+
+  <dialog id="student-dialog"><form id="student-form"><div class="dialog-top"><div><span class="eyebrow eyebrow-plain" id="dialog-eyebrow">ADD TO YOUR ROSTER</span><h2 id="dialog-title">A new beginning.</h2><p>Fill in the details below. All fields are required.</p></div><button type="button" class="icon-button" id="close-dialog" aria-label="Close dialog">×</button></div><input type="hidden" id="student-id"><div class="form-grid"><label>First name<input name="first_name" required placeholder="e.g. Amara"></label><label>Last name<input name="last_name" required placeholder="e.g. Okafor"></label><label class="full-field">Email address<input name="email" type="email" required placeholder="amara@university.edu"></label><label>Phone number<input name="phone" type="tel" placeholder="+1 (555) 012-3456"></label><label>Course<input name="course" required placeholder="e.g. Computer Science" list="course-suggestions"><datalist id="course-suggestions"></datalist></label><label>Year of study<select name="year" required><option value="">Choose a year</option><option value="1">Year 1</option><option value="2">Year 2</option><option value="3">Year 3</option><option value="4">Year 4</option><option value="5">Year 5</option><option value="6">Year 6</option></select></label><label>Status<select name="status" required><option>Active</option><option>On leave</option><option>Graduated</option></select></label><label>Enrollment date<input name="enrollment_date" type="date" required></label></div><div class="form-error" id="form-error" role="alert"></div><div class="dialog-actions"><button type="button" class="button secondary" id="cancel-dialog">Cancel</button><button type="submit" class="button primary" id="save-button">Add student <span>→</span></button></div></form></dialog>
+  <dialog id="delete-dialog" class="delete-dialog"><div class="delete-mark">!</div><h2>Remove this student?</h2><p>The record will be permanently removed. There’s no undo for this one.</p><div class="dialog-actions"><button class="button secondary" id="keep-student">Keep student</button><button class="button danger" id="confirm-delete">Remove record</button></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
